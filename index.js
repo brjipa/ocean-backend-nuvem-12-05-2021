@@ -3,9 +3,9 @@ const { MongoClient, ObjectId } = require('mongodb');
 
 (async () => {
 
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://Admin:D6PRbBgkYJLmjKm9@cluster0.ntbkn.mongodb.net/ocean_db?retryWrites=true&w=majority';
 
-const dbName = 'ocean_bancodados_11_05_2021';
+const dbName = 'ocean_db';
 
 console.info('Conectando ao banco de dados...');
 
@@ -23,7 +23,6 @@ app.get('/hello', function (req, res) {
   res.send('Hello World');
 });
 
-const mensagens = ['Essa é a primeira mensagem!', 'Essa é a segunda mensagem!'];
 
 const mensagensCollection = db.collection('mensagens');
 
