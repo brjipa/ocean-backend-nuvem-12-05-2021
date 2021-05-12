@@ -60,7 +60,7 @@ app.post('/mensagens', async (req, res) => {
 });
 
 // PUT: UPDATE (editar um registro)
-app.put('/mensagens/:id', (req, res) => {
+app.put('/mensagens/:id', async (req, res) => {
   const id = req.params.id;
 
   const mensagem = req.body;
