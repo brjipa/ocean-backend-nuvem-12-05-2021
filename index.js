@@ -40,7 +40,7 @@ app.get('/mensagens', async (req, res) => {
 app.get('/mensagens/:id', (req, res) => {
   const id = req.params.id - 1;
 
-  const mensagem = mensagens[id];
+  const mensagem = await mensagensCollection.findOne({ _id: ObjectId(id) }).catch(console.error);
 
   if (!mensagem) {
     res.send('Mensagem não encontrada.');
